@@ -525,6 +525,8 @@ static const struct mtk_i2c_compatible mt8192_compat = {
 
 static const struct of_device_id mtk_i2c_of_match[] = {
 	{ .compatible = "mediatek,mt2712-i2c", .data = &mt2712_compat },
+	/* MT6765 I2C is register compatible with the MT2712 block */
+	{ .compatible = "mediatek,mt6765-i2c", .data = &mt2712_compat },
 	{ .compatible = "mediatek,mt6577-i2c", .data = &mt6577_compat },
 	{ .compatible = "mediatek,mt6589-i2c", .data = &mt6589_compat },
 	{ .compatible = "mediatek,mt7622-i2c", .data = &mt7622_compat },
